@@ -1,0 +1,11 @@
+<?php
+    $error_url = '/';//撸死你官网
+    $url = str_replace('/link/', '', $_SERVER['REQUEST_URI']);
+    //var_dump($_SERVER);exit;
+    //判断是否为空
+    if(empty(trim($url))) exit(header('Location:'.$error_url));
+    //跳转到重定向页面
+    $host ='http://'.$_SERVER['HTTP_HOST'].'/?s=Home-AddrDirect-Index-url-';
+    $right_url = $host.$url;
+    exit(header('Location:'.$right_url));
+?>

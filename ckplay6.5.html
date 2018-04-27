@@ -1,0 +1,56 @@
+<div id="a1"></div>
+<script type="text/javascript" src="/templates/frontend/frontend-jiucao/js/jquery-1.8.3.min.js?v=1"></script>
+<script type="text/javascript" src="/public/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    //判断使用设备
+    function isMobile(){
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        console.log(sUserAgent);
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        var bIsWP = sUserAgent.match(/windows phone/i) == "windows phone";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM || bIsWP){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+    var _width = '100%';
+    var _height = 600;
+    var url = 'http://video88.lsb28.com:8091/20170906/uYoTnxiB/index.m3u8';
+    //HTML5
+    function HTML5(){
+        var flashvars={
+            p:1,
+            e:1
+        };
+        var video=[url+'->video/mp4']
+        var support=['all'];
+        CKobject.embedHTML5('a1','ckplayer_a1',_width,_height,video,flashvars,support);
+    }
+    function PC(){
+            var flashvars={
+                f:'/public/ckplayer/m3u8.swf',
+                a:url,
+                s:4,
+                p:1,
+                c:0,
+                b:1
+            };
+            var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+            CKobject.embedSWF('/public/ckplayer/ckplayer.swf','a1','ckplayer_a1',_width,_height,flashvars,params);
+    }
+    var isMobile = isMobile();
+    console.log(isMobile);
+    if(isMobile){
+        HTML5();
+    }else{
+        PC();
+    }
+</script>

@@ -1,0 +1,12 @@
+.ad-recommend {background: #fff;padding: 0 0.5111111rem; margin-bottom: 0.444444rem; margin-top: 0.3rem; margin-left: auto; margin-right:auto; }
+.ad-recommend .ad-reco-head h3 { font-size: 0.533333rem;color: #333; }
+.ad-recommend #owl-demo { padding:10px ; margin-top:10px;box-sizing: border-box;background: gainsboro;}
+.ad-recommend #owl-demo .item { margin: 3px; }
+.ad-recommend #owl-demo .item a { display: block; overflow: hidden;}
+.ad-recommend #owl-demo .item img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; /* hover封面图片放大 */  }
+.ad-recommend #owl-demo .item img:hover { transform: scale(1.2);  -ms-transform: scale(1.2); -webkit-transform: scale(1.2); -moz-transform: scale(1.2);   /* hover封面图片放大 */ }
+.owl-controls {display: none!important;}
+
+
+
+

@@ -1,0 +1,127 @@
+{include file="header.tpl"}
+{include file="header_ads.tpl"}
+<div class="video-body gray">
+	<div class="palyContent">
+	<!--视频播放框-->
+	<div class="play" style="text-align:center;position:relative;background-color:#000;">
+		<div id="a1"></div>
+	</div>
+	<div class="playName" style="height:2.3rem;">
+		<div class="left">
+			<p class="name">{$video.title}</p>
+			<p class="watch">{$video.viewnumber}次观看</p>
+		</div>
+		<div class="right" style="position:relative;">
+			<span class="praise" id="nice">
+				<i class="r1"><img src="/templates/frontend/frontend-jiucao/m/img/r1_03.png"></i>
+                <i class="g1" style="display: none"><img src="/templates/frontend/frontend-jiucao/m/img/g1_03.png"></i>
+				{$video.likes}
+			</span>
+			<span class="noPraise" id="poor">
+				<i class="r2"><img src="/templates/frontend/frontend-jiucao/m/img/r2_03.png"></i>
+                <i class="g2"  style="display: none"><img src="/templates/frontend/frontend-jiucao/m/img/g2_03.png"></i>
+				{$video.dislikes}
+			</span>
+			<span id="likes_msg" style="font-size: 0.25rem;float: left;position: absolute;width: 100%;left: 20%;top: 75%;"></span>
+		</div>
+	</div>
+	<p style="padding:10px 0;font-size:0.6rem;">更多精彩，请关注官方开车公众号：fu2dzy</p>
+</div>
+<!--
+<div class="promote">
+	<p class="promoteAddress">
+		视频推广链接（您登录账户后（只有在登录后链接才有
+效），可以把此链接发到其他论坛或部落格。当有人访
+问该地址时，就可以赚取色币！）
+		
+	</p>
+
+	<p class="promoteTitle">
+		推广链接
+	</p>
+
+	<p class="url">
+		<input cols="60" name="content" rows="2" id="content" value="{$host}{surl url="promotion/index/uid" id=$uid}" readonly="true"/>
+	</p>
+
+	<p class="copy" onclick="jsCopy()">
+		复制地址
+	</p>
+
+	<p class="promoteTitle">
+		注册成功后，推广链接生效，告诉身边朋友，马上获取色币，免费观看视频
+	</p>
+
+</div>
+-->
+<!--popup-->
+<div class="shadow" style="display:none;">&nbsp;</div>
+<div class="popup pvip" style="display:none;">
+	<div class="title">温馨提示<a href="javascript:;" class="icon iwclose" data-role="close"></a></div>
+    <div class="content">
+    <div class="padding">
+    	<div class="line"></div>
+        <p>主人，真的不考虑加入 VIP 吗？</p>
+        <p id="msg">奴家已经陪伴您<b>30</b>分钟了</p>
+        <div class="line"></div>
+    	<div class="btn_group">
+        	<img src="/templates/frontend/frontend-jiucao/m/img/p_vmodel.png" />
+        	<div class="padding"><a href="/vip" class="btn btn_blue"><em class="icon ivip"></em>加入VIP</a></div>
+        </div>
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="/public/ckplayer/ckplayer.js?t=5" charset="utf-8"></script>
+<script type="text/javascript"> 
+var url = '{$video.ipod_filename}';
+var picurl = '{$video.pic}';
+var vid = '{$id}';
+	{literal}
+	function init(){
+		var flashvars={
+			f:'/public/ckplayer/m3u8.swf',
+			a:url,
+			xml:'',			
+			s:4,
+			p:1,
+			e:0,
+			i:picurl,
+			id:'',
+			l:'',
+		  	r:'',
+		  	t:'',
+			d:'',
+		  	u:'',
+			c:0,
+			my_url:encodeURIComponent(window.location.href),
+			my_title:encodeURIComponent(document.title),
+			loaded:'loadedHandler'
+			};
+		var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+		var video=[url + '->video/m3u8'];
+		CKobject.embed('/public/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',false,flashvars,video,params);			
+	}
+	$(function(){
+		init();
+		$('#nice').click(function(){
+			setLikesAndDislikes(1,vid);
+		});
+		$('#poor').click(function(){
+			setLikesAndDislikes(2,vid);
+		});
+	});
+	function setLikesAndDislikes(t,vid){
+		$.post('/video/ajax_likes',{'t':t,'vid':vid},function(d){
+			if(d && d.code == 0){
+				$(".r"+t).hide();
+                $(".g"+t).show();
+			}
+			setTimeout(function(){
+				$('#likes_msg').html('');
+			},3000);
+			$('#likes_msg').html(d.msg);
+		},'json');
+	}
+ {/literal}
+</script>
+{include file="footer.tpl"}

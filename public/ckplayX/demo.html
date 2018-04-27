@@ -1,0 +1,44 @@
+﻿<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckplayer</title>
+		<script type="text/javascript" src="ckplayer.js"></script>
+		<!-- <script type="text/javascript" src="adv.js"></script> -->
+		<style type="text/css">body{margin:0;padding:0px;font-family:"Microsoft YaHei",YaHei,"微软雅黑",SimHei,"黑体";font-size:14px}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="video" style="width: 600px; height: 400px;"></div>
+		<script type="text/javascript">
+			var vid_1 = 'http://video.dnsoy.com:8091/9720170830/NATR-331A/550kb/hls/index.m3u8'; 
+			var vid_2 = 'http://video.dnsoy.com:8091/9720170830/NATR-332/550kb/hls/index.m3u8'; 
+			var vid_3 = 'http://video88.lsb28.com:8091/20170906/uYoTnxiB/index.m3u8'; 
+			var vid_4 = 'http://video88.lsb28.com:8091/20170906/5o5pAamx/index.m3u8';
+			var vid_5 = 'http://ginocdn.bybzj.com:8092/wuma/20170901/18728/550kb/hls/index.m3u8'; 
+			var vid_6 = 'http://btzxcdn.naishao999.com:8091/20171027/guoc/bkm/1000kb/hls/index.m3u8'; 
+			var videoObject = {
+				container: '#video',//“#”代表容器的ID，“.”或“”代表容器的class
+				variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+				flashplayer:false,//如果强制使用flashplayer则设置成true
+				//loaded: 'loadedHandler', //当播放器加载后执行的函数
+					loop: false, //播放结束是否循环播放
+				autoplay: true, //是否自动播放
+				adpause: 'http://www.ckplayer.com/yytf/swf/pause001.swf', //暂停广告
+				adpausetime: '2',
+				adinsert: 'http://www.ckplayer.com/yytf/swf/insert001.swf',//5s插入广告 5s
+				adinserttime: '5',
+				adinsertlink: '',
+				inserttime: '5',
+				adend: 'http://www.ckplayer.com/yytf/swf/end001.swf',//结束广告
+				adendtime: '15',
+				adendlink: '',
+				video:vid_5//视频地址
+			};
+			var player=new ckplayer(videoObject);
+		</script>
+	</body>
+
+</html>

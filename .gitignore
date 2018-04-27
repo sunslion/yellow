@@ -1,0 +1,5 @@
+ps/data.js
+cache/
+tmp/sessions
+tmp/thumbs
+*.log

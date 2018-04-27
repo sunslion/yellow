@@ -1,0 +1,13 @@
+div,a,img,ul,li,h3,p{padding:0;margin:0;}
+
+.banner { width:100%;}
+.banner img { display: block; width:100%;}
+div img { display: block; width:100%;}
+.margin-bottom-15 { margin-bottom: 30px;margin-top: 30px;}
+
+.btn-download { display: block; width:50%; height:70px; line-height: 70px; margin:50px auto 0; font-size: 2rem; text-decoration: none; text-align: center; border:2px solid #0ec8df; color:#0ec8df; border-radius: .5rem;}
+.btn-download:before { content:url("../images/icon_android_hover.png"); }
+
+.h3 { height:auto; line-height: 2.5rem; text-align: center; margin:50px auto 20px; padding:20px 0; background:#0ec8df; color:white; font-size: 2.5rem; }
+.h4 { font-size: 2rem; text-align:center;}
+.text-list { font-size: 2rem; line-height: 3rem; text-align: center; }

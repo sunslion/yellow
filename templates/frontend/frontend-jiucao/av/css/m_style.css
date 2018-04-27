@@ -1,0 +1,92 @@
+@import url(base.css);
+
+body{
+    background:#FFFCE7;
+    font-size:18px;
+    line-height: 30px;
+}
+.head{height: 3rem;background-color: #192332;position: relative; line-height: 3rem}
+.head img{ width:80%; }
+.head .top-link{display:inline-block; float: right;}
+.head .top-link img{ width:5rem; }
+.head .log{ display:inline-block; float: left;padding-left:2rem; }
+.head .log img{ width:5rem; }
+.container{
+    width:100%;
+}
+.av_list{
+    padding-top:5%;
+    text-align: center;
+}
+.av_list a{
+    width:30%;
+    margin:0px 1%;
+    height:8rem;
+    display:inline-block;
+    vertical-align: top;
+    position: relative;
+    height:11rem; 
+}
+.av_list span{
+    display:block;
+    vertical-align: middle;
+    text-align: center;
+}
+.av_list .block,.av_list .avator,.av_list .avator img{
+     width:6rem;
+     height:6rem;
+
+}
+.av_list .block{
+ 
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -oz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    overflow: hidden;
+    margin:0 auto;         
+}
+.av_list .avator{
+    background:#00AAFF;
+}
+.av_list .avator img{
+}
+.av_list .avator .ihot{
+    position: absolute;
+    left:0px;
+    top:0px;
+    display: block;
+    height:2rem;
+    width:2rem;
+    font-style:normal;
+    color:#fff;
+    font-size:0.2rem;
+    text-align: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -oz-border-radius: 50%;
+    -ms-border-radius: 50%;
+}
+.av_list .avator .ihot img{
+    width:2rem;
+    height:2rem;
+}
+
+.av_list .name{
+    height:2rem;
+    line-height: 1rem;
+    margin-top: 0.4rem;
+    font-size:0.4rem;
+
+}
+.av_list .name b{
+    display:block;
+    font-size:0.4rem;
+}
+
+.page-foot{background:#283547; position: relative;  overflow: hidden; text-align: center;padding:0.8rem 0px;}
+.page-foot img{ width:8rem; margin: 0 auto; }
+.page-foot .foot-log img{ width:4rem; }
+.page-foot .foot-log{ margin-bottom: 0.5rem; }
