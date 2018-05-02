@@ -1,3 +1,4 @@
+document.write("<script type='text/javascript' src='http://pv.sohu.com/cityjson?ie=utf-8'></script>");//引用ip.js
 function createA(options){
 	var ops = getStyleStr(options);
 	var a = $('<a />');
@@ -42,6 +43,9 @@ function showAds(ps){
 			var isFull = ["52","53"];//设置全屏固定广告
 			var isApp = ["24","25","26"];//APP顶部-底部广告去除宽度
 			var isPCfloat = ["3","4","44","5","6","45","47","48","49","50"];//设置PC端三排广告
+			if(isFull.indexOf(i)>=0){
+                if(getfullAdv(returnCitySN)) return true;//10m 一次全屏
+			}
 			//选择实例化的标签
 			if(adsObj && adsObj.length > 0){
 				//json样式---主要%比的样式
@@ -117,7 +121,10 @@ function showAds(ps){
 							xa.html('关闭 X');
 							xa.click(function(){
 								$(this).parent().hide();
-								if(isFull.indexOf(i)>=0) $(this).parent().parent().hide();//全屏固定广告关闭
+								if(isFull.indexOf(i)>=0){
+									$(this).parent().parent().hide();//全屏固定广告关闭
+									stopFullAdv(returnCitySN);//cookie关闭全屏	
+								} 
 								return false;
 							});
 						}
@@ -171,4 +178,58 @@ function showAds(ps){
 			}
 		});
 	}
+}
+
+function getfullAdv(returnCitySN){
+    var macIP = returnCitySN["cip"];
+    var cookName = 'local_'+macIP;
+    var fullCook = getCookie(cookName);
+    if(!fullCook) return false; //查看广告
+    return true;
+}
+
+function stopFullAdv(returnCitySN){
+    var macIP = returnCitySN["cip"];
+    var cookName = 'local_'+macIP;
+    var fullCook = getCookie(cookName);
+    //不存在加载广告
+    if(!fullCook){
+        setCookie(cookName,macIP);
+        return true;
+    }
+    return false;
+}
+
+function delFullAdv() {
+    var macIP = returnCitySN["cip"];
+    var cookName = 'local_'+macIP;
+    delCookie(cookName)
+}
+
+function setCookie(name,value)
+{
+    var times = 4*60*1000;//10mins
+    var exp = new Date();
+    exp.setTime(exp.getTime() + times);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr=document.cookie.match(reg)){
+        return unescape(arr[2]);
+    } else{
+        return null;
+    }
+}
+
+function delCookie(name)
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval=getCookie(name);
+    if(cval!=null){
+        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    }
 }
