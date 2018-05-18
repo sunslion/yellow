@@ -7,6 +7,9 @@
                 <span></span>
             </li>
             <li>
+                <a href="/avActor/Avlist" target="__blank">av女优画册</a>
+            </li>
+            <li>
                 <a href="/avActor" target="__blank">av女优一览</a>
                 <span>{$avNum}</span>
             </li>

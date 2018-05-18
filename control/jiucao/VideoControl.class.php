@@ -137,7 +137,10 @@ class Video extends Base{
     public function onYbGuide(){
         $this->tpls = array('ybGuide.tpl');
     }
-    
+    public function onYbGuide_Ios(){
+        $this->tpls = array('ybGuide_Ios.tpl');
+    }
+
     protected function getRelatedVideos($id,$page=1){
         //获取当前数据
         $videoModel = $this->modelFactory->get('video');

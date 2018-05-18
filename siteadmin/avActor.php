@@ -17,7 +17,7 @@ if ( isset($_GET['msg']) ) {
 
 $module             = ( isset($_GET['m']) && $_GET['m'] != '' ) ? trim($_GET['m']) : 'list';
 $module_template    = 'avActor/list.tpl';
-$modules_allowed    = array('list','add','edit','del');
+$modules_allowed    = array('list','add','edit','del','avActorList','avActorAdd','avActorEdit','avActorImgEdit');
 if ( in_array($module, $modules_allowed) ) {
 	$module_template = ( $module == 'list' ) ? 'avActor/list.tpl' : 'avActor/' .$module. '.tpl';
 	require 'modules/avActor/' .$module. '.php';
