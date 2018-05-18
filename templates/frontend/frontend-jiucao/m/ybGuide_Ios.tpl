@@ -4,20 +4,12 @@
 <title>Title</title>
 <link rel="stylesheet" href="/templates/frontend/frontend-jiucao/m/ybGuideStyle/css/normalize.css">
 <link rel="stylesheet" href="/templates/frontend/frontend-jiucao/m/ybGuideStyle/css/m.style.css">
-<!-- 手机访问则跳到手机站 -->
-<script type="text/javascript">
-    {literal}
-        var userAgentInfo = navigator.userAgent;
-        if(userAgentInfo.indexOf("iPhone") > 0 || userAgentInfo.indexOf("SymbianOS") > 0 || userAgentInfo.indexOf("Windows Phone") > 0 || userAgentInfo.indexOf("iPod") > 0 || userAgentInfo.indexOf("iPad") > 0) {
-            window.open("/video/YbGuide_Ios");
-        }
-    {/literal}
-</script>
+
 <body>
     <div class="banner">
         <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/banner-m.jpg" alt="优播影音，警察影音，尽在优播">
     </div>
-    <a href="http://tutu356.gz.bcebos.com/YBPlayer1.0.1.apk" class="btn-download btn_download_android">Android版下载</a>
+    <a href="https://www.pgyer.com/g7X5" target="_blank" class="btn-download btn_download_ios">Ios版下载</a>
     <h3 class="h3">新版特性</h3>
     <ul class="text-list">
         <li>
@@ -51,52 +43,51 @@
             <p>依托强大的P2P下载技术，使您能够完全流畅地享受高清影视内容,从此您的电脑只需一款播放器。</p>
         </li>
     </ul>
-    <h3 class="h3">Android版&nbsp;使用教程</h3>
-    <h4 class="h4">一、使用教程</h4>
+    <h3 class="h3">Ios版&nbsp;使用教程</h3>
+    <h4 class="h4">一、下载方法教程</h4>
     <ul class="text-list margin-bottom-15">
         <li>
-            <p>点击下载，并完成安装后，运行优播影音。</p>
-        </li>
-        <li>
-            <p>如需播放本地视频，点击“播放本地视频”按钮；</p>
-        </li>
-        <li>
-            <p>如需播放在线视频资源，点击“填写优播地址”按钮。</p>
+            <p>复制连接到苹果自带的浏览器Safari，链接地址<span class="red">https://www.pgyer.com/g7X5</span>
+                    （链接请用手机打开）， </p>
         </li>
     </ul>
     <div>
+        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/ios_step_1.jpg" alt="">
+    </div>
+    <p class="text-list margin-bottom-15">点击安装企业版本，记住要安装完了再进行下一步；</p>
+    <div>
+        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/ios_step_2.jpg" alt="">
+    </div>
+    <p class="text-list margin-bottom-15">信任软件，这一步要安装好了软件之后才可点击，软件安装好了之后点击软件，软件会显示未受信任，如下图所示：</p>
+    <div>
+        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/ios_step_3.jpg" alt="">
+    </div>
+    <p class="text-list margin-bottom-15">你要在手机：设置-通用-设备管理，对软件进行信任；</p>
+    <div>
+        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/ios_step_4.jpg" alt="">
+    </div>
+    <div>
+        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/ios_step_5.jpg" alt="">
+    </div>
+    <p class="text-list margin-bottom-15">设置完信任之后，你就可以开始使用软件了。</p>
+	<p class="text-list margin-bottom-15">如需播放在线视频资源，点击“填写优播地址”按钮。</p>
+	 <div>
         <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_1.png" alt="">
     </div>
-    <p class="text-list margin-bottom-15">在网站获取优播影音，播放链接。</p>
+    <p class="text-list margin-bottom-15">在网站获取优播影音，播放链接</p>
     <div>
         <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_2.png" alt="">
     </div>
-    <p class="text-list margin-bottom-15">因浏览器限制不能复制，请右键长按选择"选择复制"</p>
+	<p class="text-list margin-bottom-15">因浏览器限制不能复制，请右键长按选择"选择复制"</p>
     <div>
         <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_3.png" alt="">
     </div>
-    <p class="text-list margin-bottom-15">将链接复制至此处，点击"确认"即可播放。</p>
+	<p class="text-list margin-bottom-15">将链接复制至此处，点击"确认"即可播放。</p>
     <div>
         <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_6.jpg" alt="">
     </div>
-    <p class="text-list margin-bottom-15">然后就可以开始观赏正片了~!~!</p>
+		<p class="text-list margin-bottom-15">然后就可以开始观赏正片了~!~!</p>
     <div>
         <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_7.png" alt="">
     </div>
 </body>
-{include file="footer.tpl"}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

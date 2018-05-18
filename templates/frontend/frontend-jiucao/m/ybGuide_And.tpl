@@ -4,18 +4,9 @@
 <title>Title</title>
 <link rel="stylesheet" href="/templates/frontend/frontend-jiucao/m/ybGuideStyle/css/normalize.css">
 <link rel="stylesheet" href="/templates/frontend/frontend-jiucao/m/ybGuideStyle/css/m.style.css">
-<!-- 手机访问则跳到手机站 -->
-<script type="text/javascript">
-    {literal}
-        var userAgentInfo = navigator.userAgent;
-        if(userAgentInfo.indexOf("iPhone") > 0 || userAgentInfo.indexOf("SymbianOS") > 0 || userAgentInfo.indexOf("Windows Phone") > 0 || userAgentInfo.indexOf("iPod") > 0 || userAgentInfo.indexOf("iPad") > 0) {
-            window.open("/video/YbGuide_Ios");
-        }
-    {/literal}
-</script>
 <body>
     <div class="banner">
-        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/banner-m.jpg" alt="优播影音，警察影音，尽在优播">
+        <img src="images/banner-m.jpg" alt="优播影音，警察影音，尽在优播">
     </div>
     <a href="http://tutu356.gz.bcebos.com/YBPlayer1.0.1.apk" class="btn-download btn_download_android">Android版下载</a>
     <h3 class="h3">新版特性</h3>
@@ -65,38 +56,22 @@
         </li>
     </ul>
     <div>
-        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_1.png" alt="">
+        <img src="images/android_step_1.png" alt="">
     </div>
     <p class="text-list margin-bottom-15">在网站获取优播影音，播放链接。</p>
     <div>
-        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_2.png" alt="">
+        <img src="images/android_step_2.png" alt="">
     </div>
     <p class="text-list margin-bottom-15">因浏览器限制不能复制，请右键长按选择"选择复制"</p>
     <div>
-        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_3.png" alt="">
+        <img src="images/android_step_3.png" alt="">
     </div>
     <p class="text-list margin-bottom-15">将链接复制至此处，点击"确认"即可播放。</p>
     <div>
-        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_6.jpg" alt="">
+        <img src="images/android_step_6.jpg" alt="">
     </div>
     <p class="text-list margin-bottom-15">然后就可以开始观赏正片了~!~!</p>
     <div>
-        <img src="/templates/frontend/frontend-jiucao/m/ybGuideStyle/images/android_step_7.png" alt="">
+        <img src="images/android_step_7.png" alt="">
     </div>
 </body>
-{include file="footer.tpl"}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

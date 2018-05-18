@@ -1,22 +1,36 @@
-{include file="header_smart.tpl"}
-    <link rel="stylesheet" type="text/css" href="/templates/frontend/frontend-jiucao/ybGuideStyle/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/templates/frontend/frontend-jiucao/ybGuideStyle/css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="/templates/frontend/frontend-jiucao/ybGuideStyle/css/style.css" />
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>优播影音下载</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- [if it IE 9]>
-    <script src="/templates/frontend/frontend-jiucao/ybGuideStyle/js/html5shiv.min.js"></script>
-    <script src="/templates/frontend/frontend-jiucao/ybGuideStyle/js/respond.min.js"></script>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
 	<![endif]-->
     <!-- 手机访问则跳到手机站 -->
     <script type="text/javascript">
-         {literal}
-            var userAgentInfo = navigator.userAgent;
-            if (userAgentInfo.indexOf("Android") > 0 ) {
-                window.open("/video/YbGuide_Android");
-            }else if(userAgentInfo.indexOf("iPhone") > 0 || userAgentInfo.indexOf("SymbianOS") > 0 || userAgentInfo.indexOf("Windows Phone") > 0 || userAgentInfo.indexOf("iPod") > 0 || userAgentInfo.indexOf("iPad") > 0) {
-                window.open("/video/YbGuide_Ios");
-            }
-         {/literal}
+    var userAgentInfo = navigator.userAgent;
+    if (userAgentInfo.indexOf("Android") > 0 ) {
+        window.location.href = "m.index.html";
+    } 
+    else if(userAgentInfo.indexOf("iPhone") > 0 || userAgentInfo.indexOf("SymbianOS") > 0 || userAgentInfo.indexOf("Windows Phone") > 0 || userAgentInfo.indexOf("iPod") > 0 || userAgentInfo.indexOf("iPad") > 0) {
+    	window.location.href = "m.index.ios.html";
+
+    }
+	else {
+
+
+	}
     </script>
+</head>
+
 <body>
     <!-- banner -->
     <div class="banner clear">
@@ -102,13 +116,13 @@
                 <p>下载并安装完成优播影音，打开播放器。</p>
             </div>
             <p>点击左侧“添加文件”，选择“打开优播地址”</p>
-            <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/win_setp_1.jpg">
+            <img src="images/win_setp_1.jpg">
             <p class="margin-top-15 margin-bottom-5">在网站上获取优播链接，如下格式ybhd://81200906/BID5OBAAAAAAAVUEMZFZZ2MWOCUHWNSQHAHT3MFBKUJVKJN7P3LKNCPDBNY7UOSYZHDSHRAOO7YTV/十万个冷笑话第三季22.mp4</p>
-            <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/win_step_2.png" />
+            <img src="images/win_step_2.png" />
             <p class="margin-top-15 margin-bottom-5">“复制地址”粘贴到输入框，点击确定</p>
-            <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/win_step_4.png" />
+            <img src="images/win_step_4.png" />
             <p class="margin-top-15 margin-bottom-5">然后就可以观赏正片了。缓存视频到本地，再也不担心，看片卡壳了~!~!</p>
-            <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/win_step_5.png" />
+            <img src="images/win_step_5.png" />
         </div>
         <!-- 安卓 使用教程 -->
         <div class="section-4 android-content">
@@ -118,21 +132,21 @@
                     <p>点击下载，并完成安装后，运行优播影音。
                         <br/>如需播放本地视频，点击“播放本地视频”按钮；
                         <br/>如需播放在线视频资源，点击“填写优播地址”按钮。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_1.png" />
+                    <img src="images/android_step_1.png" />
                 </div>
                 <div class="float-right" style="margin-top: 53px;">
                     <p>在网站获取优播影音，播放链接。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_2.png" />
+                    <img src="images/android_step_2.png" />
                 </div>
             </div>
             <div class="clearfix margin-top-15">
                 <div class="float-left">
                     <p>将链接复制至此处，点击“确认”即可播放。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_3.png" />
+                    <img src="images/android_step_3.png" />
                 </div>
                 <div class="float-right">
                     <p>然后就可以开始观赏正片了。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_7.png" />
+                    <img src="images/android_step_7.png" />
                 </div>
             </div>
         </div>
@@ -143,59 +157,63 @@
                 <div class="float-left">
                     <p>复制连接到苹果自带的浏览器Safari，链接地址<span class="red">https://www.pgyer.com/g7X5</span>
                         <br/>（链接请用手机打开）。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/ios_step_1.jpg" />
+                    <img src="images/ios_step_1.jpg" />
                 </div>
             </div>
             <div class="clearfix margin-top-15">
                 <div class="float-left">
                     <p>点击安装企业版本，记住要安装完了再进行下一步；</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/ios_step_2.jpg" />
+                    <img src="images/ios_step_2.jpg" />
                 </div>
             </div>
             <div class="clearfix margin-top-15">
                 <div class="float-left">
                     <p>信任软件，这一步要安装好了软件之后才可点击，软件安装好了之后点击软件，软件会显示未受信任，如下图所示：</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/ios_step_3.jpg" />
+                    <img src="images/ios_step_3.jpg" />
                 </div>
             </div>
             <div class="clearfix margin-top-15">
                 <p>你要在手机：设置-通用-设备管理，对软件进行信任；</p>
                 <div class="float-left">
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/ios_step_4.jpg" />
+                    <img src="images/ios_step_4.jpg" />
                 </div>
                 <div class="float-right">
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/ios_step_5.jpg" />
+                    <img src="images/ios_step_5.jpg" />
                 </div>
             </div>
             <div class="clearfix margin-top-15">
                 <p>设置完信任之后，你就可以开始使用软件了。</p>
 				 <div class="clearfix margin-top-15">
                     <p>在网站获取优播影音，播放链接。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_2.png" />
+                    <img src="images/android_step_2.png" />
                 </div>
             </div>
 			<div class="clearfix margin-top-15">
                 <div class="float-left">
                     <p>将链接复制至此处，点击“确认”即可播放。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_3.png" />
+                    <img src="images/android_step_3.png" />
                 </div>
             </div>
             <div class="clearfix margin-top-15">
                     <p>然后就可以开始观赏正片了。</p>
-                    <img src="/templates/frontend/frontend-jiucao/ybGuideStyle/images/android_step_7.png" />
-            </div>
+                    <img src="images/android_step_7.png" />
+                </div>
+
+           
     </div>
-    <script type="text/javascript" src="/templates/frontend/frontend-jiucao/ybGuideStyle/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-        {literal}
-            $(function() {
-                $(".section-3 a").click(function() {
-                    $(".section-4").fadeOut();
-                    var sectioNum = $(this).index();
-                    $(this).addClass("active").siblings("a").removeClass("active");
-                    $(".section-4").eq(sectioNum).fadeIn();
-                })
-            })
-        {/literal}
+    $(function() {
+        $(".section-3 a").click(function() {
+            $(".section-4").fadeOut();
+            var sectioNum = $(this).index();
+            $(this).addClass("active").siblings("a").removeClass("active");
+            $(".section-4").eq(sectioNum).fadeIn();
+
+        })
+
+    })
     </script>
 </body>
+
+</html>
