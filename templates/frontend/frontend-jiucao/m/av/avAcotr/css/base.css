@@ -1,0 +1,498 @@
+﻿@charset "utf-8";
+/* CSS Document */
+@import url("reset.css");
+/*common 
+------------------------------------------ */
+body {
+	font-family: Verdana, Microsoft Yahei, "微软雅黑", serif;
+	color: #333333;
+	background: #F6F8FA;
+	font-size: 0.6rem;
+}
+/*input & textarea & select*/
+input, select, textarea {
+	background: #fff;
+	border: 0px;
+	font-size: 1rem;
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+input[type=text], input[type=password] {
+	height: 1.4rem;
+	line-height: 1.4rem;
+	padding: 0px 0.3rem;
+	color: #666666;
+	font-size: 0.6rem;
+	-webkit-border-radius: border-box;
+	-moz-border-radius: border-box;
+	box-sizing: border-box;
+}
+input[type=text]:focus, input[type=password]:focus {
+	color: #000;
+}
+select {
+	height: 23px;
+	line-height: 22px;
+	padding: 2px;
+	color: #666666;
+}
+textarea {
+	padding: 3px;
+	word-break: break-all;
+}
+/*link*/
+a {
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #666666;
+}
+/*hr & clear & display & position & scroll & shadow*/
+hr {
+	height: 0px;
+	border: none;
+	border-top: 0.04rem solid #E8E8E8;
+	margin:0;
+}
+.clear {
+	clear: both;
+	height: 0px;
+	width: 0px;
+	display: block;
+	overflow: hidden; /*兼容ie6*/
+}
+.clearfix:before, .clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix {
+	zoom: 1;
+}
+.none {
+	display: none;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.fixed {
+	position: fixed;
+}
+.scroll {
+	overflow: hidden;
+	overflow-y: auto;
+}
+.scroll_y{
+	overflow: hidden;
+	overflow-x: auto;
+}
+.scroll_y::-webkit-scrollbar{
+	display: none;
+}
+.shadow, .black_shadow {
+	background: #000;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 15;
+	opacity: 0.3; /* 透明度 */
+	-moz-opacity: 0.3;/*火狐*/
+	filter: alpha(opacity=30); /*IE*/
+	-khtml-opacity: 0.3; /* khtml, old safari */
+	overflow: hidden;
+}
+.white_shadow {
+	background: #fff;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	opacity: 0.8; /* 透明度 */
+	-moz-opacity: 0.8;/*火狐*/
+	filter: alpha(opacity=80); /*IE*/
+	-khtml-opacity: 0.8; /* khtml, old safari */
+	overflow: hidden;
+}
+/*font*/
+h1 {
+	font-size: 0.8rem;
+	font-weight: normal;
+}
+h2 {
+	font-size: 18px;
+	font-weight: normal;
+}
+p {
+	text-align: justify;
+	line-height: 0.8rem;
+	font-size: 0.6rem;
+}
+p.indent {
+	text-indent: 2em;
+}
+/*font color*/
+.white {
+	color: #fff;
+}
+.orange {
+	color: #ff9623;
+}
+.yellow {
+	color: #fefc00;
+}
+.gray {
+	color: #999999;
+}
+.red {
+	color: #ff1938;
+}
+.black {
+	color: #000;
+}
+.blue {
+	color: #05a7ff;
+}
+.green {
+	color: #96c240;
+}
+.gray_border {
+	border: 1px solid #cdd0d4;
+	background: #fff;
+}
+/*pre*/
+pre {
+	white-space: pre-wrap;
+}
+.omit{
+	display: inline-block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: keep-all;
+	-o-text-overflow: ellipsis;
+	-icab-text-overflow: ellipsis;
+	-khtml-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}
+/*icon & btn*/
+.icon, .btn {
+	display: inline-block;
+}
+/*icon*/
+.icon {
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+.itrangle, .itrangle i {
+	width: 0px;
+	height: 0px;
+	display: block;
+	border-style: solid;
+}
+/*btn*/
+.btn {
+	vertical-align: middle;
+	text-align: center;
+	display: inline-block;
+}
+.btn_red {
+	color: #fff;
+	padding: 0px 10px;
+	height: 1.6rem;
+	background: #df1336;
+	line-height: 1.6rem;
+	font-size: 0.6rem;
+	-moz-border-radius: 0.1rem;
+	-webkit-border-radius: 0.1rem;
+	-khtml-border-radius: 0.1rem;
+	border-radius: 0.1rem;
+}
+.btn_red:hover {
+	background: #be102e;
+	color: #fff;
+}
+.btn_gray {
+	color: #fff;
+	padding: 0px 15px;
+	height: 24px;
+	line-height: 24px;
+	background: #cbcbcb;
+	font-size: 12px;
+}
+.btn_gray:hover {
+	background: #595757;
+	color: #fff;
+}
+.btn_gray_border {
+	border: 1px solid #999999;
+	padding: 0px 5px;
+	height: 20px;
+	line-height: 20px;
+}
+.btn_gray_border:hover, .btn_gray_border.active {
+	border-color: #CA101A;
+}
+.btn_white {
+	height: 30px;
+	background: #fff;
+	line-height: 30px;
+	color: #1055c7;
+	padding: 0px 10px;
+}
+
+.btn_blue {
+	background: #61c4f3;
+	color: #fff;
+	padding: 0px 0.6rem;
+	height: 1.4rem;
+	line-height: 1.4rem;
+	-moz-border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	-khtml-border-radius: 0.2rem;
+	border-radius: 0.2rem;
+}
+.btn_blue:hover {
+	background: #064699;
+	color: #fff;
+}
+.btn_orange, .btn_orange_border {
+	padding: 0px 0.8rem;
+	height: 2rem;
+	line-height: 2rem;
+	-moz-border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-khtml-border-radius: 2rem;
+	border-radius: 2rem;
+	font-size: 0.8rem;
+	border: 0.05rem solid #ff9016;
+}
+.btn_orange {
+	background: #ff9016;
+	color: #fff;
+}
+.btn_orange:hover {
+	background: #ec7b00;
+	color: #fff;
+}
+.btn_orange_border {
+	background: transparent;
+	color: #ff9016;
+}
+.btn_orange_border:hover {
+	background: #ff9016;
+	color: #fff;
+}
+.orange_border_box{
+	border: 0.05rem solid #ff9016;
+	background:rgba(255,150,35,0.12);
+}
+.btn_green {
+	background: #4fbe00;
+	color: #fff;
+	padding: 0px 0.8rem;
+	height: 2rem;
+	line-height: 2rem;
+	-moz-border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-khtml-border-radius: 2rem;
+	border-radius: 2rem;
+	font-size: 0.8rem;
+}
+.btn.disabled, .btn.disabled:hover {
+	background: #DDDDDD;
+	color: #fff;
+	cursor: default;
+}
+.red_bg,.blue_bg ,.gblue_bg, .green_bg,.orange_bg,.pink_bg,.purple_bg,.dpink_bg{
+	color: #fff;
+}
+.red_bg {
+	background: #e64c3d;
+}
+.blue_bg {
+	background: #48aadb;
+}
+.gblue_bg {
+	background: #3dc08f;
+}
+.green_bg {
+	background: #4fbe00;
+}
+.orange_bg {
+	background: #fe9520;
+}
+.pink_bg {
+	background: #ea5fba;	
+}
+.dpink_bg{
+	background: #BB79A9;
+}
+.purple_bg {
+	background: #4e1f6a;
+}
+.gray_bg {
+	background: #f5f4f4;
+}
+.gray_bg > .padding {
+	padding: 8px 0px;
+}
+.white_bg {
+	background: #fff;
+}
+.white_bg.fixed {
+	top: 78px;
+}
+/*layout
+-------------------------------------------------------------------*/
+.contain {
+	margin: 0 auto;
+	width: 960px;
+}
+.container:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/*container*/
+/*edit_form*/
+.edit_form {
+	line-height: 1.6rem;
+}
+.edit_form dt, .edit_form dd {
+	float: left;
+	margin: 0.2rem 0px;
+	line-height: 0.8rem;
+}
+.edit_form dt {
+	width: auto;
+	text-align: left;
+	margin-right: 0.2rem;
+}
+.edit_form dl {
+	clear: both;
+}
+.edit_form dd {
+	min-width: 5rem;
+	max-width: 13.2rem;
+}
+.edit_form input[type=radio] {
+	margin: 0px 4px;
+}
+.edit_form input[type=text], .edit_form input[type=password] {
+	height: 1.6rem;
+	line-height: 1.6rem;
+}
+/*bread*/
+.bread {
+	line-height: 0.8rem;
+	text-align: right;
+	font-size: 0.54rem;
+}
+.bread a {
+	color: #2d384a;
+}
+.bread .padding {
+	padding: 0.5rem 0.6rem;
+}
+.pavigation {
+	font-size: 12px;
+	margin-top: 30px;
+	text-align: center;
+}
+.pavigation a {
+	display: inline-block;
+	border: 1px solid #e8e8e8;
+	color: #979797;
+	font-weight: bold;
+	margin: 0px 4px;
+	padding: 4px 8px;
+}
+.pavigation a:hover, .pavigation a.active {
+	color: #fff;
+	background: #0856a7;
+}
+/*page*/
+.page {
+	margin-top: 20px;
+	text-align: right;
+}
+.page a {
+	display: inline-block;
+	padding: 3px 8px;
+	margin: 0px 5px;
+	color: #000000;
+	background: #f2f2f2;
+	-webkit-border-radius: 0.2rem;
+	-moz-border-radius: 0.2rem;
+	-ms-border-radius: 0.2rem;
+	-khtml-border-radius: 0.2rem;
+	-o-border-radius: 0.2rem;
+	border-radius: 0.2rem;
+}
+.page span.ye {
+	margin: 0px 5px;
+}
+.page span.ye a {
+	margin: 0px 2px;
+}
+.page span.s {
+	font-size: 50%;
+	vertical-align: top;
+}
+.page a:hover, .page a.active {
+	background: #ca101a;
+	color: #fff;
+}
+/*popup*/
+.popup {
+	background: #fff;
+	left: 50%;
+	top: 50%;
+	-moz-border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	-khtml-border-radius: 0.2rem;
+	border-radius: 0.2rem;
+	z-index: 9999;
+	position: fixed;
+}
+.popup .iclose {
+	position: absolute;
+	right: 0.4rem;
+	z-index: 2;
+	top: 0.4rem;
+}
+.popup .title {
+	height: 2rem;
+	line-height: 2rem;
+	color: #333333;
+}
+.popup .title .fr {
+	border-left: 1px solid #999999;
+	padding-left: 10px;
+}
+.popup .btn_group .btn {
+	font-size: 16px;
+	padding: 0px 1rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	margin: 0px 0.2rem;
+}

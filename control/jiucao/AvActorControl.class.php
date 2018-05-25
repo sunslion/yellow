@@ -36,6 +36,7 @@ class AvActor extends Base{
         }
         $this->pushAssigns(array('avactorPush' => $avactorPush));
         $this->pushAssigns(array('avactor' => $avactor));
+        //var_dump(111);exit;
         $this->tpls = array('av/avAcotr/index.tpl');
     }
     //图库介绍

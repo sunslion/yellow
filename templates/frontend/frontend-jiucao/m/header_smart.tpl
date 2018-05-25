@@ -54,6 +54,7 @@
 	<div class="navs-body">
 		<div id="nav">
 			<a href="/" class="nav-item{if $CHID == 0} on{/if}">首页</a>
+			<a href="/avActor/Avlist" class="nav-item">Av女优画册</a>
 			<a href="/avActor" class="nav-item{if $CHID == 8080} on{/if}" >Av女优一览</a>
 			{section name=i loop=$channels}
 			<a href="{surl url=video/index/cid id=$channels[i].CHID}" class="nav-item{if $channels[i].CHID == $CHID} on{/if}">{$channels[i].name}</a>

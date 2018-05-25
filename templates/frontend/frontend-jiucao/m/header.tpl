@@ -39,7 +39,7 @@
 	</div>
 	<div class="search" id="searchOpen"><img src="/templates/frontend/frontend-jiucao/m/img/search-ico.png" alt=""></div>
 </div>
-<div class="search-contain" id="search">	
+<div class="search-contain" id="search">
 	<form name="search_form" method="POST" action="/search">
 	<div class="label">
 		<input type="text" class="text" name="kd" value="{$kd}" placeholder="输入搜索关键字" />
@@ -54,6 +54,7 @@
 	<div class="navs-body">
 		<div id="nav">
 			<a href="/" class="nav-item{if $CHID == 0} on{/if}">首页</a>
+			<a href="/avActor/Avlist" class="nav-item">Av女优画册</a>
 			<a href="/avActor" class="nav-item{if $CHID == 8080} on{/if}" >Av女优一览</a>
 			{section name=i loop=$channels}
 			<a href="{surl url=video/index/cid id=$channels[i].CHID}" class="nav-item{if $channels[i].CHID == $CHID} on{/if}">{$channels[i].name}</a>
