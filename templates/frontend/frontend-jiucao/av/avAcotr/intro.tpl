@@ -76,6 +76,7 @@
                         <p>出生：{$avactor.birth_day}</p>
                         <p>出道地点：{$avactor.birth_palce}</p>
                         <p>经纪公司：{$avactor.agency}</p>
+                        <p>职业：AV女优</p>
                     </div>
                     <div class="clear">&nbsp;</div>
                 </div>

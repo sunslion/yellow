@@ -64,7 +64,7 @@
       <div class="mt">
         <div class="width1000">
             <div class="hot_beauty">
-                <div class="hot_title">推荐AV女优</div>
+                <div class="hot_title">推荐AV女优 <a href="/avActor">更多女优&gt;&gt;</a></div>
                 <div class="content">
                     {php}$i=1;{/php}
                     <ul>
@@ -105,6 +105,28 @@
                         {/section}
                     </ul>
                 </div>
+
+                <div><a href="javascript:void(0);" class="more" style="text-align:center;" alt="点击加载更多画册">
+                        <!-- <img src="" alt=""> -->
+                    </a></div>
+
+                <script type="text/javascript">
+                    {literal}
+                    $(function(){
+                        var nli = $(".hot_beauty_pic .content").find("li").size();
+                        $(".hot_beauty_pic .content li:gt(19)").hide();
+                        if(nli < 5){
+                            $(".more").hide();
+                        }
+                        $(".more").click(function(){
+                            if(nli > 5){
+                                $(".hot_beauty_pic .content li:gt(19)").show();
+                                $(".more").hide();
+                            }
+                        })
+                    })
+                    {/literal}
+                </script>
             </div>
         </div>
     </div>
