@@ -130,5 +130,6 @@
             </div>
         </div>
     </div>
+{include file="footer.tpl"}
 </body>
 </html>

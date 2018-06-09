@@ -55,6 +55,8 @@ var _hmt = _hmt || [];
 </script>
 </center>
 </div>
+<script type="text/javascript" src="/ps/psCreat.js"></script>
+<script type="text/javascript" src="/ps/data.js"></script>
 <a href="javascript:void(0);" class="v-top"><img src="/templates/frontend/frontend-jiucao/img/top.png"/></a>
 </body>
 <script type="text/javascript">

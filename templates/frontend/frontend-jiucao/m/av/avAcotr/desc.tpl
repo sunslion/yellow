@@ -63,6 +63,7 @@
         {*</div>*}
     {*</div>*}
     {*<div class="foot-d"><a style="color:#f0ff00;" href="http://tb.53kf.com/code/client/10140693/1" target="_blank">7X24小时点击咨询</a></div>*}
+    {include file="footer.tpl"}
 </body>
 
 </html>
