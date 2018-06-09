@@ -6,7 +6,5 @@
 .ad-recommend #owl-demo .item img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; /* hover封面图片放大 */  }
 .ad-recommend #owl-demo .item img:hover { transform: scale(1.2);  -ms-transform: scale(1.2); -webkit-transform: scale(1.2); -moz-transform: scale(1.2);   /* hover封面图片放大 */ }
 .owl-controls {display: none!important;}
-
-
-
-
+.ad-recommend #owl-demo .item{ width:47%; display:inline-block; overflow: hidden;}
+.ad-recommend #owl-demo { overflow: hidden;}
